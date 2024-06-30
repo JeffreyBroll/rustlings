@@ -1,8 +1,10 @@
+<div class="oranda-hide">
+
 # rustlings 🦀❤️
 
-Greetings and welcome to `rustlings`. This project contains small exercises to get you used to reading and writing Rust code. This includes reading and responding to compiler messages!
+</div>
 
-_...looking for the old, web-based version of Rustlings? Try [here](https://github.com/rust-lang/rustlings/tree/rustlings-1)_
+Greetings and welcome to `rustlings`. This project contains small exercises to get you used to reading and writing Rust code. This includes reading and responding to compiler messages!
 
 Alternatively, for a first-time Rust learner, there are several other resources:
 
@@ -14,7 +16,7 @@ Alternatively, for a first-time Rust learner, there are several other resources:
 _Note: If you're on MacOS, make sure you've installed Xcode and its developer tools by typing `xcode-select --install`._
 _Note: If you're on Linux, make sure you've installed gcc. Deb: `sudo apt install gcc`. Yum: `sudo yum -y install gcc`._
 
-You will need to have Rust installed. You can get it by visiting https://rustup.rs. This'll also install Cargo, Rust's package/project manager.
+You will need to have Rust installed. You can get it by visiting <https://rustup.rs>. This'll also install Cargo, Rust's package/project manager.
 
 ## MacOS/Linux
 
@@ -22,7 +24,11 @@ Just run:
 
 ```bash
 curl -L https://raw.githubusercontent.com/rust-lang/rustlings/main/install.sh | bash
-# Or if you want it to be installed to a different path:
+```
+
+Or if you want it to be installed to a different path:
+
+```bash
 curl -L https://raw.githubusercontent.com/rust-lang/rustlings/main/install.sh | bash -s mypath/
 ```
 
@@ -33,8 +39,8 @@ This will install Rustlings and give you access to the `rustlings` command. Run 
 Basically: Clone the repository at the latest tag, finally run `nix develop` or `nix-shell`.
 
 ```bash
-# find out the latest version at https://github.com/rust-lang/rustlings/releases/latest (on edit 5.4.1)
-git clone -b 5.4.1 --depth 1 https://github.com/rust-lang/rustlings
+# find out the latest version at https://github.com/rust-lang/rustlings/releases/latest (on edit 5.6.1)
+git clone -b 5.6.1 --depth 1 https://github.com/rust-lang/rustlings
 cd rustlings
 # if nix version > 2.3
 nix develop
@@ -68,13 +74,13 @@ If you get a permission denied message, you might have to exclude the directory 
 
 ## Manually
 
-Basically: Clone the repository at the latest tag, run `cargo install --path .`.
+Basically: Clone the repository at the latest tag, run `cargo install --locked --path .`.
 
 ```bash
-# find out the latest version at https://github.com/rust-lang/rustlings/releases/latest (on edit 5.4.1)
-git clone -b 5.4.1 --depth 1 https://github.com/rust-lang/rustlings
+# find out the latest version at https://github.com/rust-lang/rustlings/releases/latest (on edit 5.6.1)
+git clone -b 5.6.1 --depth 1 https://github.com/rust-lang/rustlings
 cd rustlings
-cargo install --force --path .
+cargo install --locked --force --path .
 ```
 
 If there are installation errors, ensure that your toolchain is up to date. For the latest, run:
@@ -165,12 +171,8 @@ Now you should be done!
 
 ## Contributing
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md).
-
-Development-focused discussion about Rustlings happens in the [**rustlings** stream](https://rust-lang.zulipchat.com/#narrow/stream/334454-rustlings)
-on the [Rust Project Zulip](https://rust-lang.zulipchat.com). Feel free to start a new thread there
-if you have ideas or suggestions!
+See [CONTRIBUTING.md](https://github.com/rust-lang/rustlings/blob/main/CONTRIBUTING.md).
 
 ## Contributors ✨
 
-Thanks goes to the wonderful people listed in [AUTHORS.md](./AUTHORS.md) 🎉
+Thanks goes to the wonderful people listed in [AUTHORS.md](https://github.com/rust-lang/rustlings/blob/main/AUTHORS.md) 🎉
