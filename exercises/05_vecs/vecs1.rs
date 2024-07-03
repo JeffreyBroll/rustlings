@@ -14,6 +14,10 @@ fn array_and_vec() -> ([i32; 4], Vec<i32>) {
     (a, v)
 }
 
+fn main() {
+    // You can optionally experiment here.
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -21,6 +25,6 @@ mod tests {
     #[test]
     fn test_array_and_vec_similarity() {
         let (a, v) = array_and_vec();
-        assert_eq!(a, v[..]);
+        assert_eq!(a, *v);
     }
 }

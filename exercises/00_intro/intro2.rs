@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // intro2.rs
 //
 // Make the code print a greeting to the world.
@@ -7,4 +8,7 @@
 
 fn main() {
     println!("Hello {}!", "world!");
+fn main() {
+    // TODO: Fix the code to print "Hello world!".
+    //printline!("Hello world!");
 }

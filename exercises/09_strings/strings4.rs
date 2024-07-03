@@ -8,12 +8,15 @@
 // No hints this time!
 
 fn string_slice(arg: &str) {
-    println!("{}", arg);
+    println!("{arg}");
 }
 fn string(arg: String) {
-    println!("{}", arg);
+    println!("{arg}");
 }
 
+// TODO: Here are a bunch of values - some are `String`, some are `&str`.
+// Your task is to replace `placeholder(…)` with either `string_slice(…)`
+// or `string(…)` depending on what you think each value is.
 fn main() {
     string_slice("blue");
     string("red".to_string());
@@ -25,4 +28,5 @@ fn main() {
     string_slice("  hello there ".trim());
     string("Happy Monday!".to_string().replace("Mon", "Tues"));
     string("mY sHiFt KeY iS sTiCkY".to_lowercase());
+
 }

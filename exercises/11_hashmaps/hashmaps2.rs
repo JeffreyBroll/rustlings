@@ -1,5 +1,3 @@
-// hashmaps2.rs
-//
 // We're collecting different fruits to bake a delicious fruit cake. For this,
 // we have a basket, which we'll represent in the form of a hash map. The key
 // represents the name of each fruit we collect and the value represents how
@@ -16,7 +14,7 @@
 
 use std::collections::HashMap;
 
-#[derive(Hash, PartialEq, Eq)]
+#[derive(Hash, PartialEq, Eq, Debug)]
 enum Fruit {
     Apple,
     Banana,
@@ -34,7 +32,7 @@ enum Fruit {
 }
 
 fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
-    let fruit_kinds = vec![
+    let fruit_kinds = [
         Fruit::Apple,
         Fruit::Banana,
         Fruit::Mango,
@@ -51,18 +49,18 @@ fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
     }
 }
 
+fn main() {
+    // You can optionally experiment here.
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
 
     // Don't modify this function!
     fn get_fruit_basket() -> HashMap<Fruit, u32> {
-        let mut basket = HashMap::<Fruit, u32>::new();
-        basket.insert(Fruit::Apple, 4);
-        basket.insert(Fruit::Mango, 2);
-        basket.insert(Fruit::Lychee, 5);
-
-        basket
+        let content = [(Fruit::Apple, 4), (Fruit::Mango, 2), (Fruit::Lychee, 5)];
+        HashMap::from_iter(content)
     }
 
     #[test]
@@ -89,13 +87,25 @@ mod tests {
         let count = basket.values().sum::<u32>();
         assert!(count > 11);
     }
-    
+
     #[test]
     fn all_fruit_types_in_basket() {
+        let fruit_kinds = [
+            Fruit::Apple,
+            Fruit::Banana,
+            Fruit::Mango,
+            Fruit::Lychee,
+            Fruit::Pineapple,
+        ];
+
         let mut basket = get_fruit_basket();
         fruit_basket(&mut basket);
-        for amount in basket.values() {
-            assert_ne!(amount, &0);
+
+        for fruit_kind in fruit_kinds {
+            let Some(amount) = basket.get(&fruit_kind) else {
+                panic!("Fruit kind {fruit_kind:?} was not found in basket");
+            };
+            assert!(*amount > 0);
         }
     }
 }

@@ -34,14 +34,15 @@ impl State {
     }
 
     fn echo(&mut self, s: String) {
-        self.message = s
+        self.message = s;
     }
 
-    fn move_position(&mut self, p: Point) {
-        self.position = p;
+    fn move_position(&mut self, point: Point) {
+        self.position = point;
     }
 
     fn process(&mut self, message: Message) {
+<<<<<<< HEAD
         match message {
             Message::ChangeColor(x, y, z) => self.change_color((x,y,z)),
             Message::Echo(s) => self.echo(s),
@@ -49,9 +50,16 @@ impl State {
             Message::Quit => self.quit()
         }
         // TODO: create a match expression to process the different message variants
+=======
+        // TODO: Create a match expression to process the different message variants.
+>>>>>>> upstream/main
         // Remember: When passing a tuple as a function argument, you'll need extra parentheses:
-        // fn function((t, u, p, l, e))
+        // e.g. `foo((t, u, p, l, e))`
     }
+}
+
+fn main() {
+    // You can optionally experiment here.
 }
 
 #[cfg(test)]
@@ -64,8 +72,9 @@ mod tests {
             quit: false,
             position: Point { x: 0, y: 0 },
             color: (0, 0, 0),
-            message: "hello world".to_string(),
+            message: String::from("hello world"),
         };
+
         state.process(Message::ChangeColor(255, 0, 255));
         state.process(Message::Echo(String::from("Hello world!")));
         state.process(Message::Move(Point { x: 10, y: 15 }));
@@ -74,7 +83,7 @@ mod tests {
         assert_eq!(state.color, (255, 0, 255));
         assert_eq!(state.position.x, 10);
         assert_eq!(state.position.y, 15);
-        assert_eq!(state.quit, true);
+        assert!(state.quit);
         assert_eq!(state.message, "Hello world!");
     }
 }

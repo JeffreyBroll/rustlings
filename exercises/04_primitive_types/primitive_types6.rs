@@ -15,3 +15,17 @@ fn indexing_tuple() {
     assert_eq!(2, second,
         "This is not the 2nd number in the tuple!")
 }
+fn main() {}
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn indexing_tuple() {
+        let numbers = (1, 2, 3);
+
+        // TODO: Use a tuple index to access the second element of `numbers`
+        // and assign it to a variable called `second`.
+        // let second = ???;
+
+        assert_eq!(second, 2, "This is not the 2nd number in the tuple!");
+    }
+}

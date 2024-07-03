@@ -16,6 +16,10 @@ struct ColorTupleStruct(i32,i32,i32);
 #[derive(Debug)]
 struct UnitLikeStruct;
 
+fn main() {
+    // You can optionally experiment here.
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -46,6 +50,6 @@ mod tests {
         let unit_like_struct = UnitLikeStruct;
         let message = format!("{:?}s are fun!", unit_like_struct);
 
-        assert_eq!(message, "UnitLikeStructs are fun!");
+        assert_eq!(message, "UnitStructs are fun!");
     }
 }

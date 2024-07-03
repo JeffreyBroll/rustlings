@@ -1,4 +1,6 @@
-// intro1.rs
+// TODO: We sometimes encourage you to keep trying things on a given exercise,
+// even after you already figured it out. If you got everything working and feel
+// ready for the next exercise, enter `n` in the terminal.
 //
 // About this `I AM NOT DONE` thing:
 // We sometimes encourage you to keep trying things on a given exercise, even
@@ -13,6 +15,9 @@
 // Execute `rustlings hint intro1` or use the `hint` watch subcommand for a
 // hint.
 
+// The exercise file will be reloaded when you change one of the lines below!
+// Try adding a new `println!`.
+// Try removing a semicolon and see what happens in the terminal!
 
 fn main() {
     println!("Hello and");
@@ -28,13 +33,7 @@ fn main() {
     println!("or logic error. The central concept behind Rustlings is to fix these errors and");
     println!("solve the exercises. Good luck!");
     println!();
-    println!("The source for this exercise is in `exercises/00_intro/intro1.rs`. Have a look!");
-    println!(
-        "Going forward, the source of the exercises will always be in the success/failure output."
-    );
-    println!();
-    println!(
-        "If you want to use rust-analyzer, Rust's LSP implementation, make sure your editor is set"
-    );
-    println!("up, and then run `rustlings lsp` before continuing.")
+    println!("The file of this exercise is `exercises/00_intro/intro1.rs`. Have a look!");
+    println!("The current exercise path will be always shown under the progress bar.");
+    println!("You can click on the path to open the exercise file in your editor.");
 }
