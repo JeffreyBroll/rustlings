@@ -12,8 +12,6 @@ enum CreationError {
     Zero,
 }
 
-#[derive(PartialEq, Debug)]
-struct PositiveNonzeroInteger(u64);
 
 impl PositiveNonzeroInteger {
     fn new(value: i64) -> Result<PositiveNonzeroInteger, CreationError> {

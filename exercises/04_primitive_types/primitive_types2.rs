@@ -16,7 +16,6 @@ fn main() {
         println!("Neither alphabetic nor numeric!");
     }
 
-<<<<<<< HEAD
     let your_character = '5';
     if your_character.is_alphabetic() {
         println!("Alphabetical!");

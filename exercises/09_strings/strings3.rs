@@ -3,6 +3,8 @@
 // Execute `rustlings hint strings3` or use the `hint` watch subcommand for a
 // hint.
 
+fn main() {}
+
 fn trim_me(input: &str) -> String {
     return input.to_string().trim().to_string()
 }

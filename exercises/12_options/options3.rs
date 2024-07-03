@@ -11,13 +11,8 @@ struct Point {
 
 fn main() {
     let optional_point = Some(Point { x: 100, y: 200 });
-
-    match &y {
-        Some(p) => println!("Co-ordinates are {},{} ", p.x, p.y),
-        _ => panic!("no match!"),
-    }
-    y; 
-    match optional_point {
+    
+    match &optional_point {
         Some(p) => println!("Co-ordinates are {},{}", p.x, p.y),
         _ => panic!("No match!"),
     }

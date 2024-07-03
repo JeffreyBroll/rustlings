@@ -8,13 +8,6 @@
 use std::num::ParseIntError;
 
 // Don't change this function.
-fn total_cost(item_quantity: &str) -> Result<i32, ParseIntError> {
-    let processing_fee = 1;
-    let cost_per_item = 5;
-    let qty = item_quantity.parse::<i32>()?;
-
-    Ok(qty * cost_per_item + processing_fee)
-}
 
 // TODO: Fix the compiler error by changing the signature and body of the
 // `main` function.

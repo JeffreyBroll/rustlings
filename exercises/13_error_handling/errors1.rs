@@ -10,10 +10,9 @@
 // hint.
 
 pub fn generate_nametag_text(name: String) -> Result<String,String> {
->>>>>>> upstream/main
     if name.is_empty() {
         // Empty names aren't allowed.
-        Err("`name` was empty; it must be nonempty.".into())
+        Err("Empty names aren't allowed".into())
     } else {
         Ok(format!("Hi! My name is {}", name))
     }
